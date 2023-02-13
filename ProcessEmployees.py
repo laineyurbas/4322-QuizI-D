@@ -12,7 +12,7 @@ import csv
 
 # open the file
 infile = open("employee_data.csv", "r")
-# outfile = open("Newemployee_data.csv", "w")
+outfile = open("Newemployee_data.csv", "w")
 reader = csv.reader(infile)
 
 # create an empty dictionary
@@ -21,7 +21,7 @@ for item in reader:
     # use a loop to iterate through the csv file
     name = item[1] + item[2]
     salary = item[5]
-    # outfile.write(f"Manager Name:{name}\n Current Salary:{salary}/n")
+    outfile.write(f"Manager Name:{name}\n Current Salary:{salary}/n")
     print(f"Manager Name:{name}\n Current Salary:{salary}/n")
 
 
